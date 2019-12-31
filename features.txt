@@ -1,0 +1,16 @@
+We included a feature for multiple waves. If the player defeats an entire wave, a new 
+Wave starts (with the wave number printed on screen). Each new wave the aliens increase
+speed.
+We were trying to store a wave 'number' (default 1) and multiply that number by the time
+since the last animation frame and determine if the aliens should take a step.
+
+In place of if self_time > ALIEN_SPEED, we multiply time by the wave number 
+(self._time * self._wavenumber > ALIEN_SPEED, line 270 Wave). The wave number is 
+incremented by one after each Wave is defeated. 
+
+Another feature is printing the number of ship lives remaining to the screen each time 
+the player pauses a game or a ship is destroyed. This is meant to make it easy for the 
+player to keep track of his/her lives remaining. 
+
+Finally, we added sound features. Whenever the ship fires a bolt, the game makes a pew 
+sound. Whenever an alien is hit with a Player Bolt, it makes a pop sound. 
